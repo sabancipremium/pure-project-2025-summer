@@ -9,11 +9,11 @@ const IntroductionContent = () => {
         {/* The Big Picture */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            🌟 The Big Picture: Engineering with "Smart" Materials
+            🌟 The Big Picture: Engineering with &quot;Smart&quot; Materials
           </h2>
           <div className="bg-blue-50 p-6 rounded-lg mb-6">
             <p className="text-lg font-medium text-blue-800 mb-4">
-              &quot;What if your phone's memory was powered by stretching instead of electricity? 
+              &quot;What if your phone&apos;s memory was powered by stretching instead of electricity? 
               What if bridges could report their own stress levels?&quot;
             </p>
           </div>
@@ -25,7 +25,7 @@ const IntroductionContent = () => {
           </p>
           <p className="text-gray-700 leading-relaxed">
             The frontier of this field lies in coupling different physical properties—specifically, 
-            linking a material's magnetism with its mechanical structure.
+            linking a material&apos;s magnetism with its mechanical structure.
           </p>
         </section>
 
@@ -71,7 +71,7 @@ const IntroductionContent = () => {
         {/* Magnetic Anisotropy */}
         <section>
           <h2 className="text-2xl font-semibold text-gray-800 mb-6">
-            🧭 Magnetic Anisotropy: A Crystal's Internal Compass
+            🧭 Magnetic Anisotropy: A Crystal&apos;s Internal Compass
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             Magnetic anisotropy describes how a material has preferred directions for its 
@@ -155,7 +155,7 @@ const IntroductionContent = () => {
             We perform quantum mechanical simulations to precisely map how applying mechanical 
             strain reorients the magnetic easy axis in Heusler alloys. Our goal is to calculate 
             the <strong>magnetoelastic coupling coefficients</strong> (B₁, B₂), which are the 
-            'conversion factors' between mechanical strain and magnetic energy.
+            &apos;conversion factors&apos; between mechanical strain and magnetic energy.
           </p>
           <div className="bg-gray-800 p-4 rounded text-center">
             <span className="font-mono text-lg">E<sub>total</sub> = E<sub>K</sub> + E<sub>me</sub></span>

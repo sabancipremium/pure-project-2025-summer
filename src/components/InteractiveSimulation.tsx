@@ -165,7 +165,7 @@ const InteractiveSimulation = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-gray-900 mb-3">What you're seeing:</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">What you&apos;re seeing:</h3>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Crystal structure of the Heusler alloy</li>
                   <li>• Applied strain deforming the lattice</li>
