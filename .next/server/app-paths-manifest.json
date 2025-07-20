@@ -1,8 +1,0 @@
-{
-  "/methods/page": "app/methods/page.js",
-  "/introduction/page": "app/introduction/page.js",
-  "/page": "app/page.js",
-  "/results/page": "app/results/page.js",
-  "/simulation/page": "app/simulation/page.js",
-  "/team/page": "app/team/page.js"
-}
