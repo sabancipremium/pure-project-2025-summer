@@ -13,12 +13,12 @@ const IntroductionContent = () => {
           </h2>
           <div className="bg-blue-50 p-6 rounded-lg mb-6">
             <p className="text-lg font-medium text-blue-800 mb-4">
-              "What if your phone's memory was powered by stretching instead of electricity? 
-              What if bridges could report their own stress levels?"
+              &quot;What if your phone's memory was powered by stretching instead of electricity? 
+              What if bridges could report their own stress levels?&quot;
             </p>
           </div>
           <p className="text-gray-700 leading-relaxed mb-4">
-            Welcome to the world of <strong>"Smart Materials"</strong> - materials that respond 
+            Welcome to the world of <strong>&quot;Smart Materials&quot;</strong> - materials that respond 
             intelligently to external stimuli like magnetic fields and mechanical forces. These 
             materials are revolutionizing Micro-Electro-Mechanical Systems (MEMS), spintronic 
             devices, and high-sensitivity sensors.
@@ -128,7 +128,7 @@ const IntroductionContent = () => {
             💎 The Chosen Materials: Heusler Alloys
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
-            Heusler alloys represent a "perfect storm" of properties for our research:
+            Heusler alloys represent a &quot;perfect storm&quot; of properties for our research:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-yellow-50 p-4 rounded-lg text-center">
