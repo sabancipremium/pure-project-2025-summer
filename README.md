@@ -20,6 +20,7 @@ This research project investigates how to control magnetism with mechanics in He
 - **Methods:** Computational methodology and DFT workflow
 - **Results:** Research findings and data analysis
 - **Simulation:** Interactive 3D visualization (planned)
+- **References:** Academic sources and bibliography
 - **Team:** Research team and collaborators
 
 ## 🛠️ Development
