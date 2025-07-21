@@ -1,14 +1,14 @@
 const IntroductionContent = () => {
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8 section-header">
+      <h1 className="text-4xl font-bold text-gray-900 mb-8 section-header font-gothic">
         An Accelerated Course in Magneto-Mechanics
       </h1>
       
       <div className="space-y-12">
         {/* The Big Picture */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-gothic">
             🌟 The Big Picture: Engineering with &quot;Smart&quot; Materials
           </h2>
           <div className="bg-blue-50 p-6 rounded-lg mb-6">
@@ -31,7 +31,7 @@ const IntroductionContent = () => {
 
         {/* The Language of Material Properties */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-gothic">
             📐 The Language of Material Properties
           </h2>
           
@@ -70,7 +70,7 @@ const IntroductionContent = () => {
 
         {/* Magnetic Anisotropy */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-gothic">
             🧭 Magnetic Anisotropy: A Crystal&apos;s Internal Compass
           </h2>
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -90,7 +90,7 @@ const IntroductionContent = () => {
 
         {/* Magnetostriction & Villari Effect */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-gothic">
             ⚡ Magnetostriction & Villari Effect: The Two-Way Street
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ const IntroductionContent = () => {
 
         {/* Heusler Alloys */}
         <section>
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-6 font-gothic">
             💎 The Chosen Materials: Heusler Alloys
           </h2>
           <p className="text-gray-700 leading-relaxed mb-6">
@@ -148,7 +148,7 @@ const IntroductionContent = () => {
 
         {/* Project Goals */}
         <section className="bg-gray-900 text-white p-8 rounded-lg">
-          <h2 className="text-2xl font-semibold mb-6">
+          <h2 className="text-2xl font-semibold mb-6 font-gothic">
             🎯 Our Mission
           </h2>
           <p className="text-gray-300 leading-relaxed mb-6">

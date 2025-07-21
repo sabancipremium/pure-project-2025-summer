@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom font variables */
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+  --font-gothic: 'Special Elite', cursive;
+  --font-dm-sans: 'DM Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,4 +55,40 @@ body {
   border-bottom: 3px solid #3b82f6;
   padding-bottom: 0.5rem;
   margin-bottom: 2rem;
+}
+
+/* Custom animations for card interactions */
+@keyframes pulse-once {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-pulse-once {
+  animation: pulse-once 0.6s ease-in-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Card hover effects */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }

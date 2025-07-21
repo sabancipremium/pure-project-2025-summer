@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
       <div className="container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 font-jetbrains">
           Strain Engineering Magnetism in Heusler Alloys
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-dm-sans">
           Exploring magnetostriction and strain-dependent anisotropy using 
           computational methods and density functional theory
         </p>
