@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Math from './Math'
 
 // Define the steps of the calculation
 const calculationSteps = [
@@ -8,15 +9,17 @@ const calculationSteps = [
     title: 'The Magnetoelastic Energy Equation',
     explanation: (
       <>
-        The foundation of our calculation is the phenomenological model for magnetoelastic energy (E_me) in a cubic crystal. This equation links the energy to applied strains (ε) and the magnetoelastic coupling coefficients (B₁ and B₂), which we want to find.
+        The foundation of our calculation is the phenomenological model for magnetoelastic energy (E<sub>me</sub>) in a cubic crystal. This equation links the energy to applied strains (ε) and the magnetoelastic coupling coefficients (B₁ and B₂), which we want to find.
       </>
     ),
     content: (
       <div className="bg-gray-800 text-white p-6 rounded-lg">
-        <div className="text-center font-mono text-lg mb-4">
-          E<sub>me</sub> = B₁ (ε<sub>xx</sub>α₁² + ε<sub>yy</sub>α₂² + ε<sub>zz</sub>α₃²) + B₂ (ε<sub>xy</sub>α₁α₂ + ε<sub>xz</sub>α₁α₃ + ε<sub>yz</sub>α₂α₃)
-        </div>
-        <div className="text-sm text-gray-300 text-center">
+        <Math 
+          equation="E_{me} = B_1 (\varepsilon_{xx}\alpha_1^2 + \varepsilon_{yy}\alpha_2^2 + \varepsilon_{zz}\alpha_3^2) + B_2 (\varepsilon_{xy}\alpha_1\alpha_2 + \varepsilon_{xz}\alpha_1\alpha_3 + \varepsilon_{yz}\alpha_2\alpha_3)"
+          block={true}
+          className="text-white"
+        />
+        <div className="text-sm text-gray-300 text-center mt-4">
           <p>where α₁, α₂, α₃ are direction cosines of magnetization</p>
           <p>ε<sub>ij</sub> are strain tensor components</p>
         </div>
@@ -55,9 +58,11 @@ const calculationSteps = [
     ),
     content: (
       <div className="text-center">
-        <div className="text-lg font-semibold">Slope = ΔE / Δεₓₓ</div>
+        <div className="text-lg font-semibold mb-2">
+          <Math equation="\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xx}}" />
+        </div>
         <div className="text-2xl font-bold text-indigo-600 mt-2">
-          B₁ ≈ -150 meV / unit cell
+          <Math equation="B_1 \approx -150 \text{ meV/unit cell}" />
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -95,9 +100,11 @@ const calculationSteps = [
     ),
     content: (
       <div className="text-center">
-        <div className="text-lg font-semibold">Slope = ΔE / Δεₓᵧ</div>
+        <div className="text-lg font-semibold mb-2">
+          <Math equation="\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xy}}" />
+        </div>
         <div className="text-2xl font-bold text-teal-600 mt-2">
-          B₂ ≈ 50 meV / unit cell
+          <Math equation="B_2 \approx 50 \text{ meV/unit cell}" />
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -114,11 +121,15 @@ const calculationSteps = [
       <div className="grid grid-cols-2 gap-4 text-center">
         <div>
           <div className="text-sm text-gray-500">Normal Coupling</div>
-          <div className="text-3xl font-bold text-indigo-600">B₁ = -150 meV / unit cell</div>
+          <div className="text-2xl font-bold text-indigo-600">
+            <Math equation="B_1 = -150 \text{ meV/unit cell}" />
+          </div>
         </div>
         <div>
           <div className="text-sm text-gray-500">Shear Coupling</div>
-          <div className="text-3xl font-bold text-teal-600">B₂ = 50 meV / unit cell</div>
+          <div className="text-2xl font-bold text-teal-600">
+            <Math equation="B_2 = 50 \text{ meV/unit cell}" />
+          </div>
         </div>
       </div>
     ),

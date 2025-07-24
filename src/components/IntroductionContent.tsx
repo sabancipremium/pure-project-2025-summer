@@ -1,4 +1,5 @@
 import CalculationStepper from './CalculationStepper'
+import Math from './Math'
 
 const IntroductionContent = () => {
   return (
@@ -81,10 +82,11 @@ const IntroductionContent = () => {
             and <strong>hard axes</strong> (high energy).
           </p>
           <div className="bg-gray-50 p-6 rounded-lg">
-            <p className="text-center text-lg font-mono mb-2">
-              E<sub>K</sub> = K₁(α₁²α₂² + α₂²α₃² + α₃²α₁²) + ...
-            </p>
-            <p className="text-center text-gray-600 text-sm">
+            <Math 
+              equation="E_K = K_1(\alpha_1^2\alpha_2^2 + \alpha_2^2\alpha_3^2 + \alpha_3^2\alpha_1^2) + \ldots"
+              block={true}
+            />
+            <p className="text-center text-gray-600 text-sm mt-4">
               Where K₁ is the intrinsic anisotropy constant. Our goal is to introduce a new, strain-induced anisotropy that can compete with it.
             </p>
           </div>
@@ -160,7 +162,11 @@ const IntroductionContent = () => {
             coupling strength between mechanical strain (ε) and magnetic anisotropy energy.
           </p>
           <div className="bg-gray-800 p-4 rounded text-center">
-            <span className="font-mono text-lg">E<sub>total</sub> = E<sub>K</sub> + E<sub>me</sub></span>
+            <Math 
+              equation="E_{total} = E_K + E_{me}"
+              block={true}
+              className="text-white"
+            />
             <p className="text-gray-400 text-sm mt-2">
               Total energy = Intrinsic magnetic anisotropy + Strain-induced magnetoelastic coupling
             </p>
