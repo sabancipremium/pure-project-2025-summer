@@ -10,13 +10,15 @@ const shuffleArray = (array: Member[]) => {
 };
 
 const TeamContent = () => {
-  const [deck, setDeck] = useState<Member[]>(teamData);
+  const [deck, setDeck] = useState<Member[]>([]);
   const [revealedCards, setRevealedCards] = useState<Member[]>([]);
   const [isPackOpened, setIsPackOpened] = useState(false);
 
   // Shuffle the deck on component mount
   useEffect(() => {
-    setDeck(shuffleArray(teamData));
+    if (teamData && teamData.length > 0) {
+      setDeck(shuffleArray(teamData));
+    }
   }, []);
 
   const handleOpenPack = () => {
@@ -37,10 +39,27 @@ const TeamContent = () => {
   };
 
   const resetDeck = () => {
-    setDeck(shuffleArray(teamData));
-    setRevealedCards([]);
-    setIsPackOpened(false);
+    if (teamData && teamData.length > 0) {
+      setDeck(shuffleArray(teamData));
+      setRevealedCards([]);
+      setIsPackOpened(false);
+    }
   };
+
+  // Show loading state if teamData is not available
+  if (!teamData || teamData.length === 0) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 section-header text-center font-gothic">
+          Meet the Research Team
+        </h1>
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading team members...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -127,7 +146,7 @@ const TeamContent = () => {
       )}
 
       {/* Completion Message */}
-      {deck.length === 0 && revealedCards.length === teamData.length && (
+      {deck.length === 0 && revealedCards.length === (teamData?.length || 0) && (
         <div className="text-center mb-8">
           <div className="bg-green-50 p-6 rounded-lg inline-block">
             <div className="text-4xl mb-2">🎉</div>
@@ -135,7 +154,7 @@ const TeamContent = () => {
               Complete Team Revealed!
             </h3>
             <p className="text-green-700 font-dm-sans">
-              You&apos;ve discovered all {teamData.length} team members. Ready to explore again?
+              You&apos;ve discovered all {teamData?.length || 0} team members. Ready to explore again?
             </p>
           </div>
         </div>

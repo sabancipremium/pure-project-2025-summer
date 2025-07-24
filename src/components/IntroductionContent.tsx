@@ -1,3 +1,5 @@
+import CalculationStepper from './CalculationStepper'
+
 const IntroductionContent = () => {
   return (
     <div className="max-w-4xl mx-auto">
@@ -163,6 +165,22 @@ const IntroductionContent = () => {
               Total energy = Magnetic anisotropy + Magnetoelastic coupling
             </p>
           </div>
+        </section>
+
+        {/* Interactive Calculation Section */}
+        <section className="mt-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 font-gothic">
+              🧮 Calculation in Action: Interactive Guide
+            </h2>
+            <p className="max-w-3xl mx-auto text-gray-600 font-dm-sans leading-relaxed">
+              Ready to see the theory in practice? Walk through our step-by-step calculation process 
+              below to understand exactly how we derive the magnetoelastic coupling coefficients 
+              from first-principles calculations. This interactive guide breaks down the complex 
+              process into simple, understandable steps.
+            </p>
+          </div>
+          <CalculationStepper />
         </section>
       </div>
     </div>
