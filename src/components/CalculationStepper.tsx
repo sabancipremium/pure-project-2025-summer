@@ -8,12 +8,18 @@ const calculationSteps = [
     title: 'The Magnetoelastic Energy Equation',
     explanation: (
       <>
-        The foundation of our calculation is the phenomenological model for magnetoelastic energy (E) in a cubic crystal. This equation links the energy to applied strains (ε) and the magnetoelastic coupling coefficients (B₁ and B₂), which we want to find.
+        The foundation of our calculation is the phenomenological model for magnetoelastic energy (E_me) in a cubic crystal. This equation links the energy to applied strains (ε) and the magnetoelastic coupling coefficients (B₁ and B₂), which we want to find.
       </>
     ),
     content: (
-      <div className="bg-gray-800 text-white p-4 rounded-lg text-center font-mono text-lg">
-        E = B₁ (εₓₓ - ε_avg) + B₂ (εₓᵧ)
+      <div className="bg-gray-800 text-white p-6 rounded-lg">
+        <div className="text-center font-mono text-lg mb-4">
+          E<sub>me</sub> = B₁ (ε<sub>xx</sub>α₁² + ε<sub>yy</sub>α₂² + ε<sub>zz</sub>α₃²) + B₂ (ε<sub>xy</sub>α₁α₂ + ε<sub>xz</sub>α₁α₃ + ε<sub>yz</sub>α₂α₃)
+        </div>
+        <div className="text-sm text-gray-300 text-center">
+          <p>where α₁, α₂, α₃ are direction cosines of magnetization</p>
+          <p>ε<sub>ij</sub> are strain tensor components</p>
+        </div>
       </div>
     ),
   },
@@ -21,7 +27,7 @@ const calculationSteps = [
     title: 'Step 1: Applying Normal Strain (εₓₓ)',
     explanation: (
       <>
-        First, we computationally apply a series of normal strains (εₓₓ) to the crystal lattice while keeping shear strain (εₓᵧ) at zero. For each strain value, we calculate the total magnetic energy using DFT.
+        First, we computationally apply a series of normal strains (εₓₓ) to the crystal lattice while keeping shear strain (εₓᵧ) at zero. For each strain value, we calculate the total magnetic energy using DFT (Density Functional Theory).
       </>
     ),
     content: (
@@ -29,7 +35,7 @@ const calculationSteps = [
         <thead className="text-xs text-gray-700 uppercase bg-gray-100">
           <tr>
             <th scope="col" className="px-6 py-3">Strain (εₓₓ)</th>
-            <th scope="col" className="px-6 py-3">Calculated Energy (meV)</th>
+            <th scope="col" className="px-6 py-3">Calculated Energy (meV/unit cell)</th>
           </tr>
         </thead>
         <tbody>
@@ -51,7 +57,7 @@ const calculationSteps = [
       <div className="text-center">
         <div className="text-lg font-semibold">Slope = ΔE / Δεₓₓ</div>
         <div className="text-2xl font-bold text-indigo-600 mt-2">
-          B₁ ≈ -150 meV
+          B₁ ≈ -150 meV / unit cell
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -69,7 +75,7 @@ const calculationSteps = [
         <thead className="text-xs text-gray-700 uppercase bg-gray-100">
           <tr>
             <th scope="col" className="px-6 py-3">Strain (εₓᵧ)</th>
-            <th scope="col" className="px-6 py-3">Calculated Energy (meV)</th>
+            <th scope="col" className="px-6 py-3">Calculated Energy (meV/unit cell)</th>
           </tr>
         </thead>
         <tbody>
@@ -91,7 +97,7 @@ const calculationSteps = [
       <div className="text-center">
         <div className="text-lg font-semibold">Slope = ΔE / Δεₓᵧ</div>
         <div className="text-2xl font-bold text-teal-600 mt-2">
-          B₂ ≈ 50 meV
+          B₂ ≈ 50 meV / unit cell
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -108,11 +114,11 @@ const calculationSteps = [
       <div className="grid grid-cols-2 gap-4 text-center">
         <div>
           <div className="text-sm text-gray-500">Normal Coupling</div>
-          <div className="text-3xl font-bold text-indigo-600">B₁ = -150 meV</div>
+          <div className="text-3xl font-bold text-indigo-600">B₁ = -150 meV / unit cell</div>
         </div>
         <div>
           <div className="text-sm text-gray-500">Shear Coupling</div>
-          <div className="text-3xl font-bold text-teal-600">B₂ = 50 meV</div>
+          <div className="text-3xl font-bold text-teal-600">B₂ = 50 meV / unit cell</div>
         </div>
       </div>
     ),

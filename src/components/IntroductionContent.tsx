@@ -85,7 +85,7 @@ const IntroductionContent = () => {
               E<sub>K</sub> = K₁(α₁²α₂² + α₂²α₃² + α₃²α₁²) + ...
             </p>
             <p className="text-center text-gray-600 text-sm">
-              Where K₁ is the anisotropy constant we want to control
+              Where K₁ is the intrinsic anisotropy constant. Our goal is to introduce a new, strain-induced anisotropy that can compete with it.
             </p>
           </div>
         </section>
@@ -99,20 +99,20 @@ const IntroductionContent = () => {
             <div className="bg-green-50 p-6 rounded-lg">
               <h3 className="font-semibold text-green-800 mb-3">Magnetostriction</h3>
               <p className="text-green-700 text-sm">
-                Applying a magnetic field (B⃗) causes a shape change
+                Applying a magnetic field (<strong>H</strong>) causes a shape change
               </p>
               <div className="mt-3 text-center">
-                <span className="font-mono text-sm">B⃗ → ΔL</span>
+                <span className="font-mono text-sm"><strong>H</strong> → ΔL/L</span>
               </div>
             </div>
             
             <div className="bg-purple-50 p-6 rounded-lg">
               <h3 className="font-semibold text-purple-800 mb-3">Villari Effect</h3>
               <p className="text-purple-700 text-sm">
-                Applying mechanical stress (σ) changes the magnetic state (M⃗)
+                Applying mechanical stress (σ) changes the magnetic state (<strong>M</strong>)
               </p>
               <div className="mt-3 text-center">
-                <span className="font-mono text-sm">σ → ΔM⃗</span>
+                <span className="font-mono text-sm">σ → Δ<strong>M</strong></span>
               </div>
             </div>
           </div>
@@ -154,15 +154,15 @@ const IntroductionContent = () => {
             🎯 Our Mission
           </h2>
           <p className="text-gray-300 leading-relaxed mb-6">
-            We perform quantum mechanical simulations to precisely map how applying mechanical 
+            We perform quantum mechanical simulations using <strong>Density Functional Theory (DFT)</strong> to precisely map how applying mechanical 
             strain reorients the magnetic easy axis in Heusler alloys. Our goal is to calculate 
-            the <strong>magnetoelastic coupling coefficients</strong> (B₁, B₂), which are the 
-            &apos;conversion factors&apos; between mechanical strain and magnetic energy.
+            the <strong>magnetoelastic coupling coefficients</strong> (B₁, B₂), which quantify the 
+            coupling strength between mechanical strain (ε) and magnetic anisotropy energy.
           </p>
           <div className="bg-gray-800 p-4 rounded text-center">
             <span className="font-mono text-lg">E<sub>total</sub> = E<sub>K</sub> + E<sub>me</sub></span>
             <p className="text-gray-400 text-sm mt-2">
-              Total energy = Magnetic anisotropy + Magnetoelastic coupling
+              Total energy = Intrinsic magnetic anisotropy + Strain-induced magnetoelastic coupling
             </p>
           </div>
         </section>
