@@ -159,7 +159,7 @@ const TensorNotation = () => {
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Voigt notation is a mathematical shortcut that transforms complex 4th-rank tensor equations 
-          into manageable 6×6 matrix operations. It's not new physics—just smarter bookkeeping.
+          into manageable 6×6 matrix operations. It&apos;s not new physics—just smarter bookkeeping.
         </p>
       </div>
 

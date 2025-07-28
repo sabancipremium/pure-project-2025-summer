@@ -479,7 +479,7 @@ const InteractiveVisualizer = () => {
       {/* Introduction */}
       <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200">
         <h3 className="font-semibold text-blue-900 mb-3 font-gothic">
-          🔬 What You're Observing
+          🔬 What You&apos;re Observing
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-blue-800">
           <div className="bg-white p-3 rounded border">

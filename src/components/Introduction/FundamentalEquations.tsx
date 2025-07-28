@@ -215,7 +215,7 @@ const FundamentalEquations = () => {
             <div className="text-2xl mb-2">⚡</div>
             <h4 className="font-medium text-gray-900 mb-2">Magnetization (M)</h4>
             <p className="text-gray-600 text-sm">
-              Material's response - internal magnetic alignment induced by the field
+              Material&apos;s response - internal magnetic alignment induced by the field
             </p>
           </div>
           <div className="bg-white p-4 rounded border">
