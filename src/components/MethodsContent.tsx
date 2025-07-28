@@ -178,11 +178,10 @@ const MethodsContent = () => {
             <p className="text-gray-400 text-sm mb-3">
               Self-consistent field convergence follows:
             </p>
-            <div className="bg-gray-700 p-4 rounded">
+            <div className="bg-gray-700 p-4 rounded text-white">
               <SimpleMath 
                 equation={String.raw`|E_{n+1} - E_n| < 10^{-6} \text{ eV}`}
                 block={true}
-                className="text-white"
               />
             </div>
           </div>
