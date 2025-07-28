@@ -51,7 +51,12 @@ const SimpleMath: React.FC<SimpleMathProps> = ({ equation, block = false }) => {
     return <span>Loading...</span>;
   }
 
-  return <div ref={ref} />;
+  return (
+    <div 
+      ref={ref} 
+      className="katex-container [&_.katex]:text-gray-900 dark:[&_.katex]:text-white [&_.katex-html]:text-gray-900 dark:[&_.katex-html]:text-white"
+    />
+  );
 };
 
 export default SimpleMath;
