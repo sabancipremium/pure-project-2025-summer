@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KaTeX Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+</head>
+<body>
+    <h1>KaTeX Test</h1>
+    
+    <div id="test1">Test 1:</div>
+    <div id="test2">Test 2:</div>
+    <div id="test3">Test 3:</div>
+    
+    <script>
+        try {
+            console.log('Testing KaTeX rendering...');
+            
+            katex.render('\\alpha + \\beta = \\gamma', document.getElementById('test1'), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            katex.render('\\varepsilon_1 = h_0 + h_1 \\alpha_1^2', document.getElementById('test2'), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            katex.render('x^2 + y^2 = z^2', document.getElementById('test3'), {
+                displayMode: true,
+                throwOnError: false
+            });
+            
+            console.log('KaTeX test completed');
+        } catch (error) {
+            console.error('KaTeX test error:', error);
+        }
+    </script>
+</body>
+</html>

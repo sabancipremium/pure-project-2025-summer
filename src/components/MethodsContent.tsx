@@ -1,4 +1,4 @@
-import Math from './Math'
+import SimpleMath from './SimpleMath'
 
 const MethodsContent = () => {
   return (
@@ -50,7 +50,7 @@ const MethodsContent = () => {
                 in-plane lattice constants and allowing perpendicular relaxation (ISIF=4):
               </p>
               <div className="bg-white p-3 rounded border">
-                <Math equation="\varepsilon_{xx} = \varepsilon_{yy} = \varepsilon" block={true} />
+                <SimpleMath equation={String.raw`\varepsilon_{xx} = \varepsilon_{yy} = \varepsilon`} block={true} />
               </div>
             </div>
             
@@ -63,7 +63,7 @@ const MethodsContent = () => {
                 MAE computed as:
               </p>
               <div className="bg-white p-3 rounded border">
-                <Math equation="E_{MAE} = E[100] - E[001]" block={true} />
+                <SimpleMath equation={String.raw`E_{MAE} = E[100] - E[001]`} block={true} />
               </div>
               <p className="text-purple-800 text-sm mt-2">
                 with constrained magnetization directions
@@ -82,8 +82,8 @@ const MethodsContent = () => {
               The magnetoelastic energy in cubic systems is described by:
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border">
-              <Math 
-                equation="E_{me} = -B_1(\varepsilon_{xx}\alpha_1^2 + \varepsilon_{yy}\alpha_2^2 + \varepsilon_{zz}\alpha_3^2) - B_2(\varepsilon_{xy}\alpha_1\alpha_2 + \varepsilon_{yz}\alpha_2\alpha_3 + \varepsilon_{zx}\alpha_3\alpha_1)"
+              <SimpleMath 
+                equation={String.raw`E_{me} = -B_1(\varepsilon_{xx}\alpha_1^2 + \varepsilon_{yy}\alpha_2^2 + \varepsilon_{zz}\alpha_3^2) - B_2(\varepsilon_{xy}\alpha_1\alpha_2 + \varepsilon_{yz}\alpha_2\alpha_3 + \varepsilon_{zx}\alpha_3\alpha_1)`}
                 block={true}
               />
             </div>
@@ -92,8 +92,8 @@ const MethodsContent = () => {
               the linear slope of MAE vs. strain curves:
             </p>
             <div className="bg-gray-50 p-4 rounded-lg border mt-3 mb-4">
-              <Math 
-                equation="B_1 = -\frac{\partial E_{MAE}}{\partial(\varepsilon_{xx} - \varepsilon_{zz})}"
+              <SimpleMath 
+                equation={String.raw`B_1 = -\frac{\partial E_{MAE}}{\partial(\varepsilon_{xx} - \varepsilon_{zz})}`}
                 block={true}
               />
             </div>
@@ -101,8 +101,8 @@ const MethodsContent = () => {
               The total magnetic energy combines intrinsic anisotropy and strain-induced effects:
             </p>
             <div className="bg-blue-50 p-4 rounded-lg border">
-              <Math 
-                equation="E_{total} = E_K + E_{me}"
+              <SimpleMath 
+                equation={String.raw`E_{total} = E_K + E_{me}`}
                 block={true}
               />
             </div>
@@ -123,8 +123,8 @@ const MethodsContent = () => {
                 The strain tensor in Voigt notation includes both normal and shear components:
               </p>
               <div className="bg-white p-4 rounded border">
-                <Math 
-                  equation="\boldsymbol{\varepsilon} = \begin{pmatrix} \varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\ \varepsilon_{xy} & \varepsilon_{yy} & \varepsilon_{yz} \\ \varepsilon_{xz} & \varepsilon_{yz} & \varepsilon_{zz} \end{pmatrix}"
+                <SimpleMath 
+                  equation={String.raw`\boldsymbol{\varepsilon} = \begin{bmatrix} \varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\ \varepsilon_{xy} & \varepsilon_{yy} & \varepsilon_{yz} \\ \varepsilon_{xz} & \varepsilon_{yz} & \varepsilon_{zz} \end{bmatrix}`}
                   block={true}
                 />
               </div>
@@ -138,8 +138,8 @@ const MethodsContent = () => {
                 Magnetization direction is described by normalized direction cosines:
               </p>
               <div className="bg-white p-4 rounded border">
-                <Math 
-                  equation="\alpha_1^2 + \alpha_2^2 + \alpha_3^2 = 1"
+                <SimpleMath 
+                  equation={String.raw`\alpha_1^2 + \alpha_2^2 + \alpha_3^2 = 1`}
                   block={true}
                 />
               </div>
@@ -179,8 +179,8 @@ const MethodsContent = () => {
               Self-consistent field convergence follows:
             </p>
             <div className="bg-gray-700 p-4 rounded">
-              <Math 
-                equation="|E_{n+1} - E_n| < 10^{-6} \text{ eV}"
+              <SimpleMath 
+                equation={String.raw`|E_{n+1} - E_n| < 10^{-6} \text{ eV}`}
                 block={true}
                 className="text-white"
               />

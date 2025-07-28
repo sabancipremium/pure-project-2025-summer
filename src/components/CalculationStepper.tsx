@@ -15,7 +15,7 @@ const calculationSteps = [
     content: (
       <div className="bg-gray-800 text-white p-6 rounded-lg">
         <Math 
-          equation="E_{me} = B_1 (\varepsilon_{xx}\alpha_1^2 + \varepsilon_{yy}\alpha_2^2 + \varepsilon_{zz}\alpha_3^2) + B_2 (\varepsilon_{xy}\alpha_1\alpha_2 + \varepsilon_{xz}\alpha_1\alpha_3 + \varepsilon_{yz}\alpha_2\alpha_3)"
+          equation={String.raw`E_{me} = B_1 (\varepsilon_{xx}\alpha_1^2 + \varepsilon_{yy}\alpha_2^2 + \varepsilon_{zz}\alpha_3^2) + B_2 (\varepsilon_{xy}\alpha_1\alpha_2 + \varepsilon_{xz}\alpha_1\alpha_3 + \varepsilon_{yz}\alpha_2\alpha_3)`}
           block={true}
           className="text-white"
         />
@@ -59,10 +59,10 @@ const calculationSteps = [
     content: (
       <div className="text-center">
         <div className="text-lg font-semibold mb-2">
-          <Math equation="\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xx}}" />
+          <Math equation={String.raw`\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xx}}`} />
         </div>
         <div className="text-2xl font-bold text-indigo-600 mt-2">
-          <Math equation="B_1 \approx -150 \text{ meV/unit cell}" />
+          <Math equation={String.raw`B_1 \approx -150 \text{ meV/unit cell}`} />
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -101,10 +101,10 @@ const calculationSteps = [
     content: (
       <div className="text-center">
         <div className="text-lg font-semibold mb-2">
-          <Math equation="\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xy}}" />
+          <Math equation={String.raw`\text{Slope} = \frac{\Delta E}{\Delta \varepsilon_{xy}}`} />
         </div>
         <div className="text-2xl font-bold text-teal-600 mt-2">
-          <Math equation="B_2 \approx 50 \text{ meV/unit cell}" />
+          <Math equation={String.raw`B_2 \approx 50 \text{ meV/unit cell}`} />
         </div>
         <p className="text-xs text-gray-500 mt-1">(Calculated from the data points)</p>
       </div>
@@ -122,13 +122,13 @@ const calculationSteps = [
         <div>
           <div className="text-sm text-gray-500">Normal Coupling</div>
           <div className="text-2xl font-bold text-indigo-600">
-            <Math equation="B_1 = -150 \text{ meV/unit cell}" />
+            <Math equation={String.raw`B_1 = -150 \text{ meV/unit cell}`} />
           </div>
         </div>
         <div>
           <div className="text-sm text-gray-500">Shear Coupling</div>
           <div className="text-2xl font-bold text-teal-600">
-            <Math equation="B_2 = 50 \text{ meV/unit cell}" />
+            <Math equation={String.raw`B_2 = 50 \text{ meV/unit cell}`} />
           </div>
         </div>
       </div>

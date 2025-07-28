@@ -1,0 +1,24 @@
+/* KaTeX font fix */
+.katex {
+  font-family: KaTeX_Main, "Times New Roman", serif !important;
+}
+
+.katex .mord {
+  font-family: KaTeX_Main, "Times New Roman", serif !important;
+}
+
+.katex .mord.mathnormal {
+  font-family: KaTeX_Math, KaTeX_Main, "Times New Roman", serif !important;
+  font-style: italic;
+}
+
+/* Ensure Greek letters render correctly */
+.katex .mord.mathnormal[data-symbol] {
+  font-family: KaTeX_Math, KaTeX_Main, "Times New Roman", serif !important;
+}
+
+/* Test styles */
+.katex-debug {
+  border: 1px solid red;
+  background: yellow;
+}
